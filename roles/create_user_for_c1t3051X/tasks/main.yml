@@ -1,0 +1,17 @@
+---
+# tasks file for create_users
+- name: A more descriptive explanation on what is going on
+  group:
+     name: "{{ item }}"
+  with_items:
+     - yellow
+     - green
+     - blue
+     - red
+
+- name: "Setting the username to {{ username }}"
+  user:
+     name: "{{ username }}"
+     comment: My very first user
+     shell: /bin/bash
+     groups: yellow,green,blue,red

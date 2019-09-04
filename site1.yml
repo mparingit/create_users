@@ -1,0 +1,6 @@
+- hosts: server1
+  become: true
+
+  roles:
+      - create_user_for_c1t3050X
+      - install_apache_for_c1t3050X

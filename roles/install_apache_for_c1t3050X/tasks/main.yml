@@ -1,0 +1,4 @@
+---
+# tasks file for install_apache_for_c1t3050X
+- name: install apache2
+  apt: name=apache2 update_cache=yes state=latest
