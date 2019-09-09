@@ -1,17 +1,16 @@
 - hosts: server1
   become: true
+  gather_facts: True
+
+  tasks:
+      - name: "Display system Details"
+        debug:
+          msg: "{{ansible_distribution}} {{ansible_distribution_version}}"
 
   roles:
-      - create_user_for_c1t3050X
+      - create_users
 
-- hosts: server2
+- hosts: server1
   become: true
-
   roles:
-      - create_user_for_c1t3051X
-
-- hosts: server3
-  become: true
-
-  roles:
-      - create_user_for_c1t3052X
+      - create_web

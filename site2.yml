@@ -1,5 +1,0 @@
-- hosts: server2
-  become: true
-
-  roles:
-      - create_user_for_c1t3051X
