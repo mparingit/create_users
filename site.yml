@@ -9,8 +9,3 @@
 
   roles:
       - create_users
-
-- hosts: server1
-  become: true
-  roles:
-      - create_web
