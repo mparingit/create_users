@@ -1,4 +1,4 @@
-- src: git@github.dxc.com:mparingit/ansible_training_role.git
+- src: git@github.com:mparingit/create_users.git
   version: master
   scm: git
   name: create_users

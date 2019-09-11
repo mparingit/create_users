@@ -1,5 +1,14 @@
----
-# tasks file for create_web
-- name: Debug Message
-  debug:
-     msg: "Going to Create Web Server"
+# tasks file for create_users
+- name: A more descriptive explanation on what is going on
+  group:
+     name: "{{ item }}"
+  with_items:
+     - admins
+     - developers
+     
+- name: "Setting the username to {{ username }}"
+  user:
+     name: "{{ username }}"
+     comment: My very first user
+     shell: /bin/bash
+     groups: admins,developers
